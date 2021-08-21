@@ -15,6 +15,11 @@ export class QuoteComponent implements OnInit {
     new Quote(4,'Great web design without functionality is like a sports car with no engine','Paul Cookson','Maureen'),
     new Quote(5,'It is not a bug, it is an undocumented feature!','Anonymous','Maureen'),
   ]
+  goals: any;
+
+  toggleDetails(index: number) {
+    this.goals[index].showVotes = !this.goals[index].showVotes;
+  }
 
   constructor() { }
 
