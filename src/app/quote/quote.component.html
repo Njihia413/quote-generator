@@ -2,6 +2,8 @@
     <h1>My Quotes</h1>
     <hr>
     <ul>
-        <li *ngFor='let quote of quotes'>{{quote.statement}}</li>
+        <li *ngFor='let quote of quotes'>{{quote.statement}}
+            <app-quote-detail [quote]='quote'></app-quote-detail>
+        </li>
     </ul>
 </div>
