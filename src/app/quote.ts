@@ -1,6 +1,6 @@
 export class Quote {
-    id!: number;
-    author!:string;
-    statement!:string;
-    createdBy!:string;
+    showVotes:boolean;
+    constructor(public id: number, public author: string, public statement: string, public createdBy:string) {
+        this.showVotes=false;
+    }
 }
