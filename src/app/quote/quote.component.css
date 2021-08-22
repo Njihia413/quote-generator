@@ -1,0 +1,21 @@
+.quote-body {
+    background-color: black;
+}
+
+.quote-heading {
+    font-family: 'Satisfy';
+    color: #FFFFFF;
+    margin-left: 20px;
+    font-size: 50px;
+}
+
+.quotes {
+    font-family: 'Poppins';
+    color: #FFFFFF;
+    font-size: 30px;
+    text-align: center;
+}
+
+.q-hd {
+    color: #ffc107;
+}
