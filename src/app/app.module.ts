@@ -14,7 +14,7 @@ import { QuoteDetailComponent } from './quote-detail/quote-detail.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
