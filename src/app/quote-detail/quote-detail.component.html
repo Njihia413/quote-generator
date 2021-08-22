@@ -1,1 +1,11 @@
-<p>~{{quote.author}}</p>
+<div class = "quote-details">
+    <div>
+        <a (click)="upVoteQuote(quote)"><i class="fa fa-thumbs-up" title="like"></i> {{ quote.likes}}</a>
+    </div>
+    <div>
+        <a (click)="downVoteQuote(quote)"><i class="fa fa-thumbs-down" title="dislike"></i> {{quote.dislikes}}</a>
+    </div>
+    <div>
+        <a (click)="deleteQuote(quote)"><i class="fa fa-trash" title="delete"></i></a>
+    </div>
+</div>
