@@ -1,3 +1,6 @@
+<p>Author: ~ {{quote.author}}</p>
+<p>Created By: {{quote.createdBy}}</p>
+
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-4">
@@ -9,7 +12,7 @@
         </div>
     
         <div class="col-md-4">
-            <a (click)="deleteQuote(quote)"><i class="fa fa-trash" title="delete"></i></a>
+            <a (click)="deleteQuote(quote)"><i class="fa fa-trash" title="delete" id="delete"></i></a>
         </div>
     </div>
 </div>

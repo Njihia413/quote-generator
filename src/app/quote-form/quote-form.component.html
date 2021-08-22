@@ -1,1 +1,19 @@
-<p>quote-form works!</p>
+<div class="container-fluid">
+    <div class="alert alert-success" *ngIf="displaySuccessMessage" role="alert">Quote created successfully. Scroll up to view the quote</div>
+    <p class="form-heading">Create a quote</p>
+    <form  (ngSubmit)="onSubmit()" id="createQuote">
+        <div class="form-group">
+            <input type="text" required class="form-control"  id="author" placeholder=" Enter author..">
+        </div>
+        
+        <div class="form-group">
+            <input type="text" required class="form-control"  id="createdBy" placeholder="Created By..">
+        </div>
+        
+        <div class="form-group">
+            <textarea  class="form-control" id="quote" rows="6"  placeholder="Enter quote.." required></textarea>
+        </div>
+        <button class="btn btn-warning" id="form-button">Add</button>
+    </form>       
+</div>
+

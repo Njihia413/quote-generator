@@ -3,8 +3,13 @@
     <div class="quotes" *ngFor='let quote of quotes;let i = index'>
         <i class="fas fa-quote-right"></i>
         <p>{{quote.statement}}</p>
-        <p>~{{quote.author}}</p>
         <button (click)='toggleDetails(i)' class="btn btn-warning">Learn More <i class="fas fa-arrow-right"></i></button>
         <app-quote-detail *ngIf='quote.showVotes' [quote]='quote' (deleteQuoteEvent)='deleteQuote($event,i)' (upVoteQuoteEvent)="upVoteQuote($event,i)" (downVoteEvent)="downVoteQuote($event,i)"></app-quote-detail>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <app-quote-form></app-quote-form>
+        </div>
     </div>
 </div>
