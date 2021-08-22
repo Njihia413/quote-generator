@@ -17,8 +17,31 @@ export class QuoteComponent implements OnInit {
   ]
   goals: any;
 
+  //toggle details
   toggleDetails(index: number) {
-    this.goals[index].showVotes = !this.goals[index].showVotes;
+    this.quotes[index].showVotes = !this.quotes[index].showVotes;
+  }
+
+  //delete a quote
+  deleteQuote(deleteQuoteEvent: any,index: number) {
+    if(deleteQuoteEvent) {
+      this.quotes.splice(index,1);
+    }
+  }
+
+  //upvote a quote
+  upVoteQuote(upVoteQuoteEvent: any,index:number) {
+    if(upVoteQuoteEvent) {
+      this.quotes[index].likes++;
+    }
+  }
+  
+
+  //downvote a quote
+  downVoteQuote(downVoteQuoteEvent:any, index:number) {
+    if (downVoteQuoteEvent) {
+      this.quotes[index].dislikes++;
+    }
   }
 
   constructor() { }
