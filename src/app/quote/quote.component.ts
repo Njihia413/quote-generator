@@ -73,6 +73,17 @@ export class QuoteComponent implements OnInit {
     }
   }
 
+  // getting the quote with the highest likes from the array
+  getQuoteWithHighestLikes() {
+    let quoteWithHighestLikes = this.quotes[0];
+    for (let i = 0; i < this.quotes.length; i++) {
+      if (this.quotes[i].likes > quoteWithHighestLikes.likes) {
+        quoteWithHighestLikes = this.quotes[i];
+      }
+    }
+    return quoteWithHighestLikes;
+  }
+
   constructor() { }
 
   ngOnInit(): void {
