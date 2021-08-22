@@ -6,6 +6,6 @@
             <li>{{quote.statement}}</li>
             <p>~{{quote.author}}</p>
             <button (click)='toggleDetails(i)'>Learn More</button>
-            <app-quote-detail *ngIf='quote.showVotes' [quote]='quote'></app-quote-detail>
+            <app-quote-detail *ngIf='quote.showVotes' [quote]='quote' (deleteQuoteEvent)='deleteQuote($event,i)' (upVoteQuoteEvent)="upVoteQuote($event,i)" (downVoteEvent)="downVoteQuote($event,i)"></app-quote-detail>
         </div>
     </ul>
