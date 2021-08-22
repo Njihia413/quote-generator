@@ -15,4 +15,7 @@
             <a (click)="deleteQuote(quote)"><i class="fa fa-trash" title="delete" id="delete"></i></a>
         </div>
     </div>
+    <div>
+        <span title="Days passed"><small>{{quote.createdAt|dayCount}} days ago</small></span>
+    </div>
 </div>

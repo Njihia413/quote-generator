@@ -14,35 +14,35 @@ export class QuoteComponent implements OnInit {
     'Dr. Christopher Dayagdag',
     'Atara Njihia',
     'A website without visitors is like a ship lost in the horizon',
-    new Date(2021,8,22)),
+    new Date(2020,9,27)),
     
     new Quote(
     2,
     'Unknown',
     'Magdalene Mwaniki',
     'A user interface is like a joke. If you have to explain it, it is not that good', 
-    new Date(2021,8,22)),
+    new Date(2021,2,16)),
 
     new Quote(
     3,
     'Antonie De-Saint Exupery',
     'Lyn Muthoni',
     'A designer knows he has achieved perfection not when there is nothing left to add, but when there is nothing left to take away',
-    new Date(2021,8,22)),
+    new Date(2020,8,8)),
 
     new Quote(
     4,
     'Paul Cookson',
     'Jonah Kanyiri',
     'Great web design without functionality is like a sports car with no engine',
-    new Date(2021,8,22)),
+    new Date(2019,8,21)),
 
     new Quote(
     5,
     'Anonymous',
     'Maureen Njihia',
     'It is not a bug, it is an undocumented feature!',
-    new Date(2021,8,22)),
+    new Date(2020,8,21)),
   ]
   goals: any;
 
