@@ -1,22 +1,30 @@
 <div class="container-fluid">
-    <div class="alert alert-success" *ngIf="displaySuccessMessage" role="alert">Quote created successfully. Scroll up to view the quote</div>
     <p class="form-heading">Create a Quote</p>
-    <form  (ngSubmit)="onSubmit()" id="createQuote">
+    <div class="alert alert-success" *ngIf="displaySuccessMessage" role="alert">Quote created successfully. Scroll up to view the quote</div>
+    <form (ngSubmit)="onSubmit()" #quoteForm='ngForm' id="createQuote">
         <div class="form-group">
-            <input type="text" required class="form-control"  id="author" placeholder=" Enter author..">
+            <input type="text" required class="form-control"  id="author" [(ngModel)]="newQuote.author" name="author" #author='ngModel' placeholder=" Enter author..">
+            <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
+                <p>Author Required!</p>
+            </div>
         </div>
-        
         <div class="form-group">
             <label for="createdBy"></label>
-            <input type="text" required class="form-control"  id="createdBy" placeholder="Created By..">
+            <input type="text" required class="form-control"  id="createdBy" [(ngModel)]="newQuote.createdBy" name="createdBy" #createdBy="ngModel" placeholder="Created By..">
+            <div [hidden]="createdBy.valid || createdBy.pristine" class="alert alert-danger">
+                <p>Required Field!</p>
+            </div>
         </div>
         
         <div class="form-group">
             <label for="quote"></label>
-            <textarea  class="form-control" id="quote" rows="6"  placeholder="Enter quote.." required></textarea>
+            <textarea  class="form-control" id="quote" rows="6"  [(ngModel)]="newQuote.statement" name="statement" #statement="ngModel" placeholder="Enter quote.." required></textarea>
+            <div [hidden]="statement.valid || statement.pristine" class="alert alert-danger">
+                <p>Fill in the Quote!</p>
+            </div>
         </div>
         <br>
-        <button class="btn btn-warning" id="form-button">Add<i class="fas fa-plus"></i></button>
+        <button type="submit" class="btn btn-warning" id="form-button">Add<i class="fas fa-plus"></i></button>
     </form>       
 </div>
 

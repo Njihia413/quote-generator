@@ -7,6 +7,10 @@
         <app-quote-detail *ngIf='quote.showVotes' [quote]='quote' (deleteQuoteEvent)='deleteQuote($event,i)' (upVoteQuoteEvent)="upVoteQuote($event,i)" (downVoteEvent)="downVoteQuote($event,i)"></app-quote-detail>
     </div>
 
+    <div>
+        <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+    </div>
+
     <div class="row">
         <div class="col-md-12">
             <app-quote-form></app-quote-form>
